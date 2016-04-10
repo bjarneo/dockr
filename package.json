@@ -11,7 +11,7 @@
   ],
   "main": "index.js",
   "scripts": {
-    "prepublish": "npm test && npm run lint",
+    "prepublish": "npm test",
     "posttest": "npm run lint",
     "lint": "eslint .",
     "test": "mocha -R min test/**/*.test.js --no-timeouts"

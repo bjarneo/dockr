@@ -18,7 +18,8 @@ describe('#execute', () => {
     });
 
     after(function(done) {
-        exec('docker stop registry && docker rm -v registry', (error, stdout) => {
+        const cmd = 'docker stop registry && docker rm -v registry && docker rmi localhost:5000/just-a-test';
+        exec(cmd, (error, stdout) => {
             if (error) {
                 throw new Error(error);
             }
