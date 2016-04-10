@@ -32,6 +32,10 @@ Tests
 $ npm test
 ```
 
+Inspiration
+------
+[grunt-dockerbuild](https://github.com/olesku/grunt-dockerbuild)
+
 Contribution
 ------
 Contributions are appreciated.
