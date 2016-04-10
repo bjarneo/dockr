@@ -1,0 +1,33 @@
+{
+  "name": "dockr",
+  "version": "1.0.0",
+  "description": "Automatically build docker image and push it to your registry.",
+  "keywords": [
+    "docker",
+    "image",
+    "tag",
+    "push",
+    "registry"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "npm test && npm run lint",
+    "lint": "eslint .",
+    "test": "mocha -R min test/**/*.test.js --no-timeouts"
+  },
+  "author": "Bjarne Oeverli",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bjarneo/dockr.git"
+  },
+  "homepage": "https://github.com/bjarneo/dockr",
+  "bugs": {
+    "url": "https://github.com/bjarneo/dockr/issues"
+  },
+  "devDependencies": {
+    "eslint": "^2.7.0",
+    "eslint-config-vgno": "^6.0.0",
+    "mocha": "^2.4.5"
+  }
+}
