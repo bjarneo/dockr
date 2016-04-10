@@ -1,7 +1,5 @@
 Dockr
 ======
-![Travis](https://travis-ci.org/bjarneo/dockr.svg?branch=master)
-
 Automatically build docker image and push it to your registry.
 
 Installation
