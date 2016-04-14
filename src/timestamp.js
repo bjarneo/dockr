@@ -1,16 +1,16 @@
 'use strict';
 
-const zeroPad = num => (num <= 9) ? ('0' + num) : num;
+const zeroPad = require('zero-pad');
 
 module.exports = function getTimestamp() {
     const date = new Date();
 
-    return [
+    return zeroPad([
         date.getFullYear(),
-        zeroPad(date.getMonth()),
-        zeroPad(date.getDate()),
-        zeroPad(date.getHours()),
-        zeroPad(date.getMinutes()),
-        zeroPad(date.getSeconds())
-    ].join('');
+        date.getMonth(),
+        date.getDate(),
+        date.getHours(),
+        date.getMinutes(),
+        date.getSeconds()
+    ]).join('');
 };
