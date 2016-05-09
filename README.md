@@ -20,7 +20,8 @@ execute({
     username: 'username', // default ''
     imageName: 'myawesomeimage', // default ''
     dockerFileLocation: '.', // default '.' current location,
-    timestamp: true // default false. Append timestamp to the docker tag
+    timestamp: true, // default false. Append timestamp to the docker tag,
+    verbose: true // default false. Console log docker process.
 }).then(tag => {
     console.log('Image successfully pushed to %s', tag);
 }).catch(console.error);

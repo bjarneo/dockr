@@ -1,5 +1,6 @@
 'use strict';
 
+const config = require('./config');
 const getTimestamp = require('./timestamp');
 const build = require('./commands').build;
 const push = require('./commands').push;
@@ -31,8 +32,12 @@ module.exports = function execute(options) {
         username: options.username || '',
         imageName: options.imageName || '',
         timestamp: options.timestamp || false,
-        dockerFileLocation: options.dockerFileLocation || '.'
+        dockerFileLocation: options.dockerFileLocation || '.',
+        verbose: options.verbose || false
     };
+
+    // Set config so we could reused it everywhere without passing it as args
+    config.set('options', opts);
 
     return build(generateTag(opts), opts.dockerFileLocation)
         .then(push)
