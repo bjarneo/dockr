@@ -32,7 +32,7 @@
     "mocha": "2.4.5"
   },
   "dependencies": {
-    "ora": "0.2.1",
+    "ora": "1.4.0",
     "zero-pad": "1.0.2"
   }
 }
